@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(({ command, mode }) => {
   const isProduction = command === 'build' || mode === 'production' || process.env.NODE_ENV === 'production';
   return {
-    base: isProduction ? '/Anju-Maam/' : '/',
+    base: isProduction ? './' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
