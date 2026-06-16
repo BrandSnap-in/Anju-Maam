@@ -1,3 +1,15 @@
+:root {
+  --color-edu-indigo: #0F2942;
+  --color-edu-royal: #163B5F;
+  --color-edu-accent: #C5A059;
+  --color-edu-lightgold: #F7EAD0;
+  --color-edu-bg: #FCFDFF;
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Outfit", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 html {
@@ -5,11 +17,11 @@ html {
 }
 
 body {
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Outfit", "Inter", sans-serif;
+  font-family: var(--font-display);
 }
 
 .transition-smooth {

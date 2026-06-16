@@ -1,6 +1,7 @@
 {
   "name": "anju-maam-cbse-tuition",
   "version": "1.0.0",
+  "type": "module",
   "description": "Anju Ma'am CBSE Tuition Classes - 25+ Years of Academic Excellence",
   "scripts": {
     "dev": "vite --port 3000 --host 0.0.0.0 --strictPort",
@@ -9,6 +10,8 @@
     "lint": "echo 'No lint warnings'"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "tailwindcss": "^4.3.1",
     "vite": "^8.0.16"
   }
 }

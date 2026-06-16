@@ -1,6 +1,7 @@
 // Anju Ma'am's CBSE Tuition Classes - Client Side Interactions
 // Simple, high-performance vanilla JS script supporting complete layout fidelity.
 
+// --- Testimonials Carousel Data Array ---
 const testimonials = [
   {
     studentName: "Aarav Sharma",
@@ -14,24 +15,24 @@ const testimonials = [
     studentName: "Ananya Iyer",
     parentName: "Meenakshi Iyer",
     className: "Class 12 CBSE (Humanities)",
-    subjectInfo: "Political Science & Geography",
-    scoreOrResult: "99% in Political Science",
+    subjectInfo: "Political Science",
+    scoreOrResult: "99% in Pol Science",
     feedback: "I am extremely grateful to Anju Ma'am for her rigorous map-pointing drills and detailed 8-mark feedback sheets. Drawing timelines and keeping structured subheadings became second nature to me under her vigilant eye. She's not just a teacher; she is an inspiring mentor."
   },
   {
     studentName: "Kabir Malhotra",
     parentName: "Sanjay Malhotra",
     className: "Class 10 CBSE",
-    subjectInfo: "Complete Social Science (SST)",
-    scoreOrResult: "Marks Jumped from 62% to 94%",
+    subjectInfo: "SST & Hindi",
+    scoreOrResult: "62% to 94% Jump",
     feedback: "Before joining Anju Ma'am's tuition center, Kabir was extremely anxious about SST and would struggle to write detailed answers. Ma'am identified his hesitation and personally worked on his speed, answer framing, and structure. His scores vaulted beyond belief!"
   },
   {
     studentName: "Priyanjali Sen",
     parentName: "Dr. Arundhati Sen",
     className: "Class 12 CBSE (Humanities)",
-    subjectInfo: "History, Geo & Pol Science",
-    scoreOrResult: "Class 12 Humanities School Topper",
+    subjectInfo: "History, Geo & Pol Sci",
+    scoreOrResult: "Humanities School Topper",
     feedback: "The level of depth in Anju Ma'am's notes is matchless. She references real CBSE evaluation keys to point out exactly what examiners are looking for. Her small batches allowed her to check each of my answers and mock-exams with personal care. High recommendation to all parents!"
   },
   {
@@ -39,7 +40,7 @@ const testimonials = [
     parentName: "Siddharth Varma",
     className: "Class 9 CBSE",
     subjectInfo: "Hindi, Social Science",
-    scoreOrResult: "Consistently Top of Section",
+    scoreOrResult: "Top of Section",
     feedback: "Anju Ma'am's emphasis on neatness, structured points, and vocabulary in Hindi has elevated Rohan's writing confidence. The constant assessments and updates she sends keeps us in close loop with his day-to-day progress. Extremely satisfying experience!"
   },
   {
@@ -47,7 +48,7 @@ const testimonials = [
     parentName: "Namrata Kapoor",
     className: "Class 10 CBSE",
     subjectInfo: "Hindi & SST",
-    scoreOrResult: "96% in Hindi, 97% in SST",
+    scoreOrResult: "96% Hindi • 97% SST",
     feedback: "My daughter was quite weak in grammar and struggled to write long-form questions, but Ma'am designed short, memorable guidelines and flowcharts. The weekly mocks helped her overcome exam-hall stage fright completely. Truly an exceptional teacher!"
   }
 ];
@@ -55,11 +56,119 @@ const testimonials = [
 let currentTestimonialIndex = 0;
 let testimonialAutoPlayInterval = null;
 
+// Renders individual testimonial inside the single-card container
+const renderTestimonial = (index, instant = false) => {
+  const item = testimonials[index];
+  const container = document.getElementById("testimonial-card-container");
+  if (!container) return;
+
+  const updateDOM = () => {
+    const badgeContainer = document.getElementById("testi-score-badge");
+    if (badgeContainer) {
+      if (item.scoreOrResult) {
+        badgeContainer.innerHTML = `
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-100 py-1 px-3.5 rounded-full text-emerald-700 text-xs font-bold shadow-3xs">
+            <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>${item.scoreOrResult}</span>
+          </div>
+        `;
+      } else {
+        badgeContainer.innerHTML = "";
+      }
+    }
+
+    const feedbackEl = document.getElementById("testi-feedback");
+    if (feedbackEl) feedbackEl.textContent = `"${item.feedback}"`;
+
+    const authorEl = document.getElementById("testi-author");
+    if (authorEl) authorEl.textContent = item.studentName;
+
+    const parentEl = document.getElementById("testi-parent");
+    if (parentEl) {
+      const isDaughter = ["Ananya Iyer", "Priyanjali Sen", "Drishti Kapoor"].includes(item.studentName);
+      parentEl.innerHTML = `${isDaughter ? 'Daughter' : 'Son'} of <span class="font-semibold text-slate-700">${item.parentName}</span>`;
+    }
+
+    const metaEl = document.getElementById("testi-meta");
+    if (metaEl) metaEl.textContent = `${item.className} • ${item.subjectInfo}`;
+
+    // Update avatar initials
+    const avatarEl = document.getElementById("testi-avatar");
+    if (avatarEl && item.studentName) {
+      const initials = item.studentName.split(" ").map(n => n[0]).join("");
+      avatarEl.textContent = initials;
+    }
+
+    // Update visual carousel dots state
+    document.querySelectorAll(".testi-dot").forEach((dot, dotIdx) => {
+      if (dotIdx === index) {
+        dot.classList.add("w-8", "bg-[#C5A059]");
+        dot.classList.remove("w-2", "bg-slate-250");
+      } else {
+        dot.classList.remove("w-8", "bg-[#C5A059]");
+        dot.classList.add("w-2", "bg-slate-250");
+      }
+    });
+
+    if (typeof lucide !== "undefined") {
+      lucide.createIcons();
+    }
+  };
+
+  if (instant) {
+    updateDOM();
+    container.style.opacity = "1";
+  } else {
+    container.style.opacity = "0";
+    setTimeout(() => {
+      updateDOM();
+      container.style.opacity = "1";
+    }, 150);
+  }
+};
+
+window.prevTestimonial = () => {
+  resetAutoplay();
+  currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+  renderTestimonial(currentTestimonialIndex);
+};
+
+window.nextTestimonial = () => {
+  resetAutoplay();
+  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+  renderTestimonial(currentTestimonialIndex);
+};
+
+window.setTestimonialIndex = (idx) => {
+  resetAutoplay();
+  currentTestimonialIndex = idx;
+  renderTestimonial(currentTestimonialIndex);
+};
+
+const startAutoplay = () => {
+  testimonialAutoPlayInterval = setInterval(() => {
+    currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+    renderTestimonial(currentTestimonialIndex);
+  }, 6000);
+};
+
+const resetAutoplay = () => {
+  if (testimonialAutoPlayInterval) {
+    clearInterval(testimonialAutoPlayInterval);
+  }
+  startAutoplay();
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize Lucide Icons
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
+
+  // Initialize Testimonial Slider Instantly
+  renderTestimonial(0, true);
+  startAutoplay();
 
   // --- Scroll Header Navigation State ---
   const header = document.getElementById("header-nav");
@@ -228,90 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counterElements.forEach(el => countObserver.observe(el));
 
-  // --- Testimonials Slider Carousel Logic ---
-  const renderTestimonial = (index) => {
-    const item = testimonials[index];
-    const container = document.getElementById("testimonial-card-container");
-    if (!container) return;
 
-    container.style.opacity = "0";
-    setTimeout(() => {
-      const badgeContainer = document.getElementById("testi-score-badge");
-      if (item.scoreOrResult) {
-        badgeContainer.innerHTML = `
-          <div class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-100 py-1 px-3.5 rounded-full text-emerald-700 text-xs font-bold shadow-sm">
-            <i data-lucide="award" class="w-4 h-4 text-emerald-600"></i>
-            <span>${item.scoreOrResult}</span>
-          </div>
-        `;
-      } else {
-        badgeContainer.innerHTML = "";
-      }
-
-      document.getElementById("testi-feedback").textContent = `"${item.feedback}"`;
-      document.getElementById("testi-author").textContent = item.studentName;
-      document.getElementById("testi-parent").innerHTML = `Son/Daughter of <span class="font-semibold text-slate-700">${item.parentName}</span>`;
-      document.getElementById("testi-meta").textContent = `${item.className} • ${item.subjectInfo}`;
-
-      // Update avatar initials
-      const avatarEl = document.getElementById("testi-avatar");
-      if (avatarEl && item.studentName) {
-        const initials = item.studentName.split(" ").map(n => n[0]).join("");
-        avatarEl.textContent = initials;
-      }
-
-      // Update dot states
-      document.querySelectorAll(".testi-dot").forEach((dot, dotIdx) => {
-        if (dotIdx === index) {
-          dot.classList.add("w-8", "bg-[#C5A059]");
-          dot.classList.remove("w-2", "bg-slate-200");
-        } else {
-          dot.classList.remove("w-8", "bg-[#C5A059]");
-          dot.classList.add("w-2", "bg-slate-200");
-        }
-      });
-
-      if (typeof lucide !== "undefined") {
-        lucide.createIcons();
-      }
-      container.style.opacity = "1";
-    }, 250);
-  };
-
-  window.prevTestimonial = () => {
-    resetAutoplay();
-    currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
-    renderTestimonial(currentTestimonialIndex);
-  };
-
-  window.nextTestimonial = () => {
-    resetAutoplay();
-    currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-    renderTestimonial(currentTestimonialIndex);
-  };
-
-  window.setTestimonialIndex = (idx) => {
-    resetAutoplay();
-    currentTestimonialIndex = idx;
-    renderTestimonial(currentTestimonialIndex);
-  };
-
-  const startAutoplay = () => {
-    testimonialAutoPlayInterval = setInterval(() => {
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      renderTestimonial(currentTestimonialIndex);
-    }, 6000);
-  };
-
-  const resetAutoplay = () => {
-    if (testimonialAutoPlayInterval) {
-      clearInterval(testimonialAutoPlayInterval);
-    }
-    startAutoplay();
-  };
-
-  renderTestimonial(0);
-  startAutoplay();
 
   // --- Collapsible FAQ Accordion Elements ---
   window.toggleFaq = (idx) => {
@@ -454,7 +480,7 @@ ${email ? `- *Email*: ${email}\n` : ""}${message ? `- *Requirements/Message*: ${
 Please contact me regarding batch availability and schedule detailed counsel.`;
 
       const encodedMsgText = encodeURIComponent(completeMessageStr);
-      const targetWhatsappUrl = `https://wa.me/919811446304?text=${encodedMsgText}`;
+      const targetWhatsappUrl = `https://wa.me/919811846228?text=${encodedMsgText}`;
 
       // Save locally to localStorage
       try {

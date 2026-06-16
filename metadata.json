@@ -1,0 +1,8 @@
+{
+  "name": "Anju Ma'am CBSE Academy",
+  "description": "Premium offline Board coaching by Anju Ma'am with 25+ years of excellence. High-scoring SST, Hindi & Humanities classes in Shastri Nagar, Ghaziabad, Uttar Pradesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
