@@ -1,80 +1,974 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- SEO Primary Tags -->
-    <title>Anju Ma'am CBSE Tuition Classes - 25+ Years of Academic Excellence</title>
-    <meta name="description" content="Join premium offline coaching by Anju Ma'am with 25+ years of teaching excellence. High-impact tutoring for Classes 8-10 CBSE (Hindi, Social Science/SST) and Classes 11-12 CBSE Humanities (History, Geography, Political Science). Small batches of 10-15 students." />
-    <meta name="keywords" content="CBSE Tuition Classes, SST Tuition, Hindi Tuition Classes, Social Science Tuition, History Tuition Classes, Geography Tuition, Political Science Tuition, Humanities Coaching, CBSE Tutor, Board Exam Coaching, Shyam Nagar Jaipur, Anju Maam SST" />
-    <meta name="author" content="Anju Ma'am CBSE Tuition" />
-
-    <!-- Open Graph / Social Media Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Anju Ma'am CBSE Tuition Classes | 25+ Years Experience" />
-    <meta property="og:description" content="Expert offline CBSE tutoring by Anju Ma'am. Leading batch systems with custom answer-writing skills, personalized coaching, and regular practice exams for 8th-12th Humanities, SST & Hindi." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&h=630&q=80" />
-    <meta property="og:site_name" content="Anju Ma'am CBSE Academy" />
-
-    <!-- Fonts Import -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Structured Data Markup: Local Business & Educational Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://maps.app.goo.gl/AyA3DPig2kJFAQK86#localbusiness",
-          "name": "Anju Ma'am CBSE Tuition Classes",
-          "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
-          "telephone": "+919811446304",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "D-102, Siddharth Path, Shyam Nagar",
-            "addressLocality": "Jaipur",
-            "addressRegion": "Rajasthan",
-            "postalCode": "302019",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "26.904439",
-            "longitude": "75.7656755"
-          },
-          "url": "https://maps.app.goo.gl/AyA3DPig2kJFAQK86",
-          "priceRange": "$$"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "name": "Anju Ma'am CBSE Tuition Academy",
-          "description": "Accredited educational tutorials with 25+ years of excellence teaching CBSE board curriculum for Grades 8-12.",
-          "knowsAbout": ["CBSE Curriculum", "Social Science", "History", "Hindi literature", "Political Science", "Geography", "Board Exam Writing Skills"],
-          "numberOfEmployees": "1",
-          "teaches": [
-            {
-              "@type": "Course",
-              "name": "Classes 8-10 CBSE Social Science & Hindi",
-              "description": "Complete guidance of Civics, Economics, History, Geography, and Hindi literature."
-            },
-            {
-              "@type": "Course",
-              "name": "Classes 11-12 CBSE Humanities Core",
-              "description": "In-depth coaching in History, Geography, and Political Science with board scoring strategies."
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Anju Ma'am CBSE Tuition Classes - 25+ Years of Academic Excellence</title>
+  <meta name="description" content="Join premium offline coaching by Anju Ma'am with 25+ years of teaching excellence. High-impact tutoring for Classes 8-10 CBSE (Hindi, Social Science/SST) and Classes 11-12 CBSE Humanities." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            edu: {
+              indigo: '#0F2942',
+              royal: '#163B5F',
+              accent: '#C5A059',
+              lightgold: '#F7EAD0',
+              bg: '#FCFDFF',
             }
-          ]
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
         }
-      ]
+      }
     }
-    </script>
-  </head>
-  <body class="bg-[#fcfdff] text-slate-800 antialiased selection:bg-[#dfc48c]/30 selection:text-slate-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  </script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="relative overflow-x-hidden bg-[#FCFDFF] text-slate-800 antialiased min-h-screen">
+
+  <!-- 1. Header Navigation -->
+  <header id="header-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0F2942] border-b border-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3 group focus:outline-none">
+          <div class="bg-[#C5A059] text-[#0F2942] p-2 rounded-lg shadow-inner group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="award" class="w-6 h-6 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-display font-bold text-lg leading-tight tracking-wide group-hover:text-[#C5A059] transition-colors">ANJU MA'AM</span>
+            <span class="text-[#C5A059]/95 font-mono text-[10px] tracking-widest font-semibold uppercase">CBSE TUTORIALS</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="#about" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">About</a>
+          <a href="#subjects" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Subjects</a>
+          <a href="#why-choose-us" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Why Us</a>
+          <a href="#methodology" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Methodology</a>
+          <a href="#board-prep" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Board Prep</a>
+          <a href="#testimonials" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Success Stories</a>
+          <a href="#faq" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">FAQ</a>
+          <a href="#location" class="nav-link-anchor text-slate-200/90 hover:text-[#C5A059] text-sm font-medium tracking-wide transition-colors duration-200">Location</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:+919811446304" class="flex items-center gap-2 text-slate-200 hover:text-[#C5A059] text-sm font-medium transition-colors" title="Call Anju Ma'am">
+            <div class="bg-white/10 p-2 rounded-full border border-white/5">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-[#C5A059]"></i>
+            </div>
+            <span>+91 98114 46304</span>
+          </a>
+          <a href="#contact" class="nav-link-anchor bg-[#C5A059] hover:bg-[#C5A059]/90 text-[#0F2942] font-semibold text-xs uppercase tracking-wider py-2.5 px-5 rounded-lg transition-all duration-200 shadow-md">Book a Demo</a>
+        </div>
+
+        <div class="flex items-center lg:hidden gap-3">
+          <a href="tel:+919811446304" class="sm:hidden flex items-center justify-center bg-white/10 p-2.5 rounded-lg border border-white/5 text-[#C5A059]"><i data-lucide="phone" class="w-4 h-4"></i></a>
+          <button id="mobile-menu-btn" class="text-slate-200 hover:text-[#C5A059] p-2.5 rounded-lg focus:outline-none"><i data-lucide="menu" id="menu-open-icon" class="w-6 h-6"></i><i data-lucide="x" id="menu-close-icon" class="w-6 h-6 hidden"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="lg:hidden fixed left-0 w-full bg-[#0F2942]/98 border-b border-[#C5A059]/10 backdrop-blur-lg shadow-xl transition-all duration-300 ease-in-out top-[-500px] opacity-0 max-h-0 pointer-events-none">
+      <div class="px-4 space-y-4">
+        <div class="grid grid-cols-1 gap-2 border-b border-white/5 pb-4">
+          <a href="#about" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">About</a>
+          <a href="#subjects" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Subjects</a>
+          <a href="#why-choose-us" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Why Us</a>
+          <a href="#methodology" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Methodology</a>
+          <a href="#board-prep" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Board Prep</a>
+          <a href="#testimonials" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Testimonials</a>
+          <a href="#faq" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">FAQ</a>
+          <a href="#location" class="nav-link-anchor text-slate-200 hover:text-[#C5A059] py-2 px-4 rounded-lg text-base font-medium">Location</a>
+        </div>
+        <div class="flex flex-col gap-3 pt-2">
+          <a href="tel:+919811446304" class="flex items-center justify-center gap-3 bg-white/5 text-slate-200 py-3 rounded-lg border border-white/5 text-sm font-medium"><i data-lucide="phone" class="w-4 h-4 text-[#C5A059]"></i><span>Call +91 98114 46304</span></a>
+          <a href="#contact" class="nav-link-anchor bg-[#C5A059] hover:bg-[#C5A059]/90 text-[#0F2942] font-bold text-center py-3 rounded-lg text-sm uppercase tracking-wider">Book a Demo Class</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="relative bg-gradient-to-br from-[#0B1D33] via-[#0F2942] to-[#081322] min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-[#C5A059] blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/10 w-96 h-96 rounded-full bg-sky-400 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-[#C5A059]/10 border border-[#C5A059]/30 py-1.5 px-4 rounded-full text-[#C5A059] font-medium text-xs tracking-wider uppercase pulse-accent-active">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#C5A059]"></span>
+            CBSE Academic Batches 2026-2027: Now Enrolling
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-tight sm:leading-none">
+            25+ Years of Guiding <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#F7EAD0] to-[#C5A059]">Students Towards Success</span>
+          </h1>
+
+          <p class="text-slate-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Expert CBSE coaching for Classes 8–12 in Hindi, Social Science, History, Geography, Political Science, and Humanities subjects.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#contact" class="nav-link-anchor w-full sm:w-auto bg-[#C5A059] hover:bg-[#C5A059]/90 text-[#0F2942] font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+              <span>Book a Demo Class</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#contact" class="nav-link-anchor w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-xl border border-white/15 transition-all duration-300 text-center">
+              Contact Now
+            </a>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 inline-flex items-center gap-3.5 max-w-md w-full">
+            <div class="bg-orange-500/15 text-orange-400 py-1 px-2.5 rounded-lg text-xs font-bold whitespace-nowrap">Seat Alert</div>
+            <p class="text-slate-300 text-xs text-left">
+              🔔 <span class="font-semibold text-white">Only 4 Seats Left</span> in the Grade 10 batch and <span class="font-semibold text-white">3 Seats Left</span> in Grade 12 Humanities.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 text-left border-t border-white/5">
+            <div>
+              <span class="block font-display font-bold text-2xl text-[#C5A059]">25+</span>
+              <span class="block text-slate-400 text-xs font-medium uppercase tracking-wider">Years Experience</span>
+            </div>
+            <div>
+              <span class="block font-display font-bold text-2xl text-[#C5A059]">10-15</span>
+              <span class="block text-slate-400 text-xs font-medium uppercase tracking-wider">Batch Max</span>
+            </div>
+            <div>
+              <span class="block font-display font-bold text-2xl text-[#C5A059]">1-on-1</span>
+              <span class="block text-slate-400 text-xs font-medium uppercase tracking-wider">Attention</span>
+            </div>
+            <div>
+              <span class="block font-display font-bold text-2xl text-[#C5A059]">100%</span>
+              <span class="block text-slate-400 text-xs font-medium uppercase tracking-wider">CBSE Syllabus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md lg:max-w-none">
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#C5A059] to-sky-400 opacity-20 blur-xl"></div>
+            <div class="relative bg-[#11243B] border border-white/10 rounded-3xl overflow-hidden p-3 shadow-2xl">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square bg-[#0F2942]">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Students with Anju Ma'am" class="object-cover w-full h-full opacity-90" referrerPolicy="no-referrer" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942] via-transparent to-transparent"></div>
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[90%]">
+                  <span class="bg-[#0F2942]/90 backdrop-blur-md text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded font-semibold border border-white/10">SST</span>
+                  <span class="bg-[#0F2942]/90 backdrop-blur-md text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded font-semibold border border-white/10">HINDI</span>
+                  <span class="bg-[#0F2942]/90 backdrop-blur-md text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded font-semibold border border-white/10">HUMANITIES</span>
+                </div>
+              </div>
+
+              <!-- Badges -->
+              <div class="absolute -bottom-4 -left-4 bg-[#0F2942] border border-white/10 rounded-2xl p-4 shadow-xl flex items-center gap-3">
+                <div class="bg-[#C5A059]/15 text-[#C5A059] p-2 rounded-xl"><i data-lucide="award" class="w-5 h-5"></i></div>
+                <div>
+                  <span class="block font-display font-extrabold text-white text-base">98.4%</span>
+                  <span class="block text-slate-400 text-[10px] uppercase tracking-wider">Top Score</span>
+                </div>
+              </div>
+
+              <div class="absolute -top-4 -right-4 bg-[#0F2942] border border-white/10 rounded-2xl p-4 shadow-xl flex items-center gap-3">
+                <div class="bg-sky-500/10 text-sky-400 p-2 rounded-xl"><i data-lucide="users" class="w-5 h-5"></i></div>
+                <div>
+                  <span class="block font-display font-extrabold text-white text-base">Small Batches</span>
+                  <span class="block text-slate-400 text-[10px] uppercase tracking-wider">15 Max</span>
+                </div>
+              </div>
+
+              <div class="pt-6 pb-3 px-4 space-y-2">
+                <div class="flex items-center gap-2 text-[#C5A059] text-xs font-mono uppercase tracking-widest font-semibold">
+                  <span>Shyam Nagar Center</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                </div>
+                <h3 class="text-white text-base font-display font-bold">Personalized Guidance Redefined</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Interactive whiteboards, personalized review checklists, and detailed handwritten feedback from the first session.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About Section -->
+  <section id="about" class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#C5A059]/10 blur-3xl -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-sky-500/5 blur-3xl -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#C5A059] rounded-3xl -z-10"></div>
+            <div class="bg-[#0F2942] p-2.5 rounded-3xl shadow-xl overflow-hidden aspect-[4/5] relative">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="About Anju Ma'am Classroom Setup" class="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" />
+              <div class="absolute bottom-6 inset-x-6 bg-[#031526]/95 backdrop-blur-md p-4 rounded-xl border border-white/10 text-center">
+                <span class="block text-[#C5A059] font-display font-extrabold text-2xl leading-none">25+ Years</span>
+                <span class="block text-slate-300 text-[10px] tracking-wider uppercase font-semibold mt-1">Teaching Excellence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-8">
+          <div class="space-y-3">
+            <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">MEET YOUR FOUNDER & EDUCATOR</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942] tracking-tight">Anju Ma'am: Creating Pioneers in Hindi and SST</h2>
+            <div class="w-16 h-1.5 bg-[#C5A059] rounded-full"></div>
+          </div>
+
+          <div class="text-slate-600 space-y-4 text-sm leading-relaxed font-light">
+            <p>
+              As a teacher, I have spent the last quarter-century addressing a persistent challenge: why do highly intelligent students struggle to secure high scores in subjects like <span class="font-semibold text-[#0F2942]">Social Science (SST)</span> and <span class="font-semibold text-[#0F2942]">Hindi</span>?
+            </p>
+            <p>
+              The answer rarely lies in intelligence; rather, it is about <span class="font-semibold text-[#0F2942]">engagement and execution</span>. Under my guidance, memory-heavy humanities are broken down into logical storylines, visual timeline links, and highly intuitive map-pointing exercises.
+            </p>
+            <p class="font-normal text-slate-700 bg-slate-50 p-4 border-l-4 border-[#C5A059] rounded-r-xl">
+              "We do not encourage standard root-memorization. Every class is interactive, pushing students to think critically, formulate logical structure arguments, and highlight key academic search terms."
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 bg-[#0F2942]/5 p-2.5 rounded-xl border border-[#0F2942]/10 h-11 w-11 flex items-center justify-center"><i data-lucide="award" class="text-[#C5A059]"></i></div>
+              <div>
+                <h4 class="font-display font-semibold text-slate-800 text-sm">25+ Years Experience</h4>
+                <p class="text-slate-500 text-xs mt-0.5 font-light">Mentoring batches in Jaipur since 2001.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 bg-[#0F2942]/5 p-2.5 rounded-xl border border-[#0F2942]/10 h-11 w-11 flex items-center justify-center"><i data-lucide="file-check" class="text-[#C5A059]"></i></div>
+              <div>
+                <h4 class="font-display font-semibold text-slate-800 text-sm">Handwritten Summaries</h4>
+                <p class="text-slate-500 text-xs mt-0.5 font-light">Save revision hours with clear bullet notes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Statistics Counters -->
+  <section class="relative bg-[#0F2942] py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-[#C5A059] blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-11">
+        <div class="text-center p-6 bg-white/5 border border-white/5 rounded-3xl backdrop-blur-sm flex flex-col items-center">
+          <div class="bg-white/10 p-3 rounded-2xl mb-3.5 border border-white/5"><i data-lucide="award" class="text-[#C5A059]"></i></div>
+          <span class="counter-el font-display font-black text-4xl sm:text-5xl text-white tracking-tight" data-target="25" data-suffix="+">25+</span>
+          <h3 class="text-white font-display font-bold text-xs uppercase mt-2">Years Experience</h3>
+        </div>
+        <div class="text-center p-6 bg-white/5 border border-white/5 rounded-3xl backdrop-blur-sm flex flex-col items-center">
+          <div class="bg-white/10 p-3 rounded-2xl mb-3.5 border border-white/5"><i data-lucide="users" class="text-[#C5A059]"></i></div>
+          <span class="counter-el font-display font-black text-4xl sm:text-5xl text-white tracking-tight" data-target="1500" data-suffix="+">1500+</span>
+          <h3 class="text-white font-display font-bold text-xs uppercase mt-2">Students Mentored</h3>
+        </div>
+        <div class="text-center p-6 bg-white/5 border border-white/5 rounded-3xl backdrop-blur-sm flex flex-col items-center">
+          <div class="bg-white/10 p-3 rounded-2xl mb-3.5 border border-white/5"><i data-lucide="star" class="text-[#C5A059]"></i></div>
+          <span class="counter-el font-display font-black text-4xl sm:text-5xl text-white tracking-tight" data-target="98" data-suffix="%" data-special="true">98.4%</span>
+          <h3 class="text-white font-display font-bold text-xs uppercase mt-2">Top Score Record</h3>
+        </div>
+        <div class="text-center p-6 bg-white/5 border border-white/5 rounded-3xl backdrop-blur-sm flex flex-col items-center">
+          <div class="bg-white/10 p-3 rounded-2xl mb-3.5 border border-white/5"><i data-lucide="thumbs-up" class="text-[#C5A059]"></i></div>
+          <span class="counter-el font-display font-black text-4xl sm:text-5xl text-white tracking-tight" data-target="100" data-suffix="%">100%</span>
+          <h3 class="text-white font-display font-bold text-xs uppercase mt-2">Parent Satisfaction</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Subjects Section -->
+  <section id="subjects" class="py-24 bg-slate-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">CBSE COURSE DIRECTORY</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942] tracking-tight">Subjects Offered & Curriculum Scope</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center mt-12 mb-16">
+        <div class="bg-white border border-slate-100 p-1.5 rounded-xl shadow-lg flex gap-1">
+          <button id="tab-btn-0" onclick="setActiveSubjectTab(0)" class="py-3.5 px-6 sm:px-10 rounded-lg font-display text-sm font-bold tracking-wide transition-all duration-300 bg-[#0F2942] text-white shadow-md">
+            <span class="block text-[10px] uppercase tracking-wider font-semibold opacity-80">Classes 8 – 10 (CBSE)</span>
+            <span class="block text-sm font-extrabold">Secondary Foundation</span>
+          </button>
+          <button id="tab-btn-1" onclick="setActiveSubjectTab(1)" class="py-3.5 px-6 sm:px-10 rounded-lg font-display text-sm font-[#0F2942] font-bold tracking-wide transition-all duration-300">
+            <span class="block text-[10px] uppercase tracking-wider font-semibold opacity-80">Classes 11 – 12 (CBSE)</span>
+            <span class="block text-sm font-extrabold">Senior Secondary Mastery</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid for Group 0 -->
+      <div id="subject-group-0" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Hindi -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-[#C5A000]/10 hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-[#0F2942]/5 p-3 rounded-2xl"><i data-lucide="pen-tool" class="text-[#C5A059]"></i></div>
+              <span class="bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border">CBSE Focused</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-display font-extrabold text-[#0F2942] text-lg">Hindi (Course A & B)</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">Comprehensive coverage of literature books, advanced vyakaran grammar, letters, and essay writing.</p>
+            </div>
+            <div class="space-y-2 pt-4 border-t border-slate-50">
+              <h4 class="text-slate-700 text-xs font-bold uppercase tracking-wider">Core Topics:</h4>
+              <ul class="space-y-1 text-slate-600 text-xs font-light">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Hindi Vyakaran Mastery</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Literature & Poetry Analysis</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-50 flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold text-slate-400">CLASS 8 - 10</span>
+            <button onclick="enquireSubject('Hindi')" class="text-[#0F2942] hover:text-[#C5A059] text-xs font-bold flex items-center gap-1.5 transition-colors"><span>Enquire Batch</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+
+        <!-- Merged SST: History, Geography, Civics & Economics -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-[#0F2942]/5 p-3 rounded-2xl"><i data-lucide="globe" class="text-[#C5A059]"></i></div>
+              <span class="bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border">All 4 Modules Included</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-display font-extrabold text-[#0F2942] text-lg">Social Science (SST)</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">A unified, engaging approach combining History, Geography, Democratic Politics (Civics), and Economics into clear, storytelling-driven narratives and logical concepts.</p>
+            </div>
+            <div class="space-y-2 pt-4 border-t border-slate-50">
+              <h4 class="text-slate-700 text-xs font-bold uppercase tracking-wider">Core Curriculum Coverage:</h4>
+              <ul class="space-y-2 text-slate-600 text-xs font-light">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0"></i> <span><strong>History:</strong> Chronological timelines, Indian & Global Nationalism storylines</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0"></i> <span><strong>Geography:</strong> Rigorous map-pointing practicing work & resource allocation</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0"></i> <span><strong>Civics:</strong> Real-world polity, constitution analysis, Federalism & Power sharing</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059] mt-0.5 flex-shrink-0"></i> <span><strong>Economics:</strong> sectors of Indian Finance, Money, credit structures, development models</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-50 flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold text-slate-400">CLASS 8 - 10</span>
+            <button onclick="enquireSubject('Complete Social Science (SST)')" class="text-[#0F2942] hover:text-[#C5A059] text-xs font-bold flex items-center gap-1.5 transition-colors"><span>Enquire Batch</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid for Group 1 -->
+      <div id="subject-group-1" class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- History 12 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-[#0F2942]/5 p-3 rounded-2xl"><i data-lucide="book-open" class="text-[#C5A059]"></i></div>
+              <span class="bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border">Class 11 & 12</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-display font-extrabold text-[#0F2942] text-lg">Themes in History</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">Comprehensive study of old archives, Mughal/Colonial periods, and Partition timeline.</p>
+            </div>
+            <div class="space-y-2 pt-4 border-t border-slate-50">
+              <h4 class="text-slate-700 text-xs font-bold uppercase tracking-wider">Core Topics:</h4>
+              <ul class="space-y-1 text-slate-600 text-xs font-light">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> 8-Mark Response Drafting</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Sources-Based Case Studies</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-50 flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold text-slate-400">HUMANITIES</span>
+            <button onclick="enquireSubject('History - Class 11/12')" class="text-[#0F2942] hover:text-[#C5A059] text-xs font-bold flex items-center gap-1.5 transition-colors"><span>Enquire Batch</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+
+        <!-- Geography 12 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-[#0F2942]/5 p-3 rounded-2xl"><i data-lucide="map" class="text-[#C5A059]"></i></div>
+              <span class="bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border">Class 11 & 12</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-display font-extrabold text-[#0F2942] text-lg">Human & Indian Geography</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">Map representation, settlement schemes, resources distribution, and global transit networks.</p>
+            </div>
+            <div class="space-y-2 pt-4 border-t border-slate-50">
+              <h4 class="text-slate-700 text-xs font-bold uppercase tracking-wider">Core Topics:</h4>
+              <ul class="space-y-1 text-slate-600 text-xs font-light">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Map and Graph Analysis</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> World Demographic Shifts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-50 flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold text-slate-400">HUMANITIES</span>
+            <button onclick="enquireSubject('Geography - Class 11/12')" class="text-[#0F2942] hover:text-[#C5A059] text-xs font-bold flex items-center gap-1.5 transition-colors"><span>Enquire Batch</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+
+        <!-- Pol Science 12 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="bg-[#0F2942]/5 p-3 rounded-2xl"><i data-lucide="landmark" class="text-[#C5A059]"></i></div>
+              <span class="bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border">Class 11 & 12</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-display font-extrabold text-[#0F2942] text-lg">World & Indian Politics</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">Breakdown of international affairs, post-independence India events, and state building.</p>
+            </div>
+            <div class="space-y-2 pt-4 border-t border-slate-50">
+              <h4 class="text-slate-700 text-xs font-bold uppercase tracking-wider">Core Topics:</h4>
+              <ul class="space-y-1 text-slate-600 text-xs font-light">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Cartoon & Flag Interpretation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#C5A059]"></i> Cold War Legacy Analysis</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-50 flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold text-slate-400">HUMANITIES</span>
+            <button onclick="enquireSubject('Pol Science - Class 11/12')" class="text-[#0F2942] hover:text-[#C5A059] text-xs font-bold flex items-center gap-1.5 transition-colors"><span>Enquire Batch</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Why Choose Us Feature Grid -->
+  <section id="why-choose-us" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">THE ANJU MA'AM EDGE</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942] tracking-tight">Why Parents Prefer Anju Ma'am</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div class="group bg-[#FCFDFF] border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="bg-[#0F2942]/5 p-3 rounded-2xl w-fit group-hover:bg-[#0F2942] transition-all"><i data-lucide="award" class="text-[#C5A059]"></i></div>
+          <h3 class="font-display font-bold text-[#0F2942] text-base mt-4">25+ Years of Trust</h3>
+          <p class="text-slate-500 text-xs mt-2 font-light">Deep understanding of CBSE syllabus revisions and evaluation keys across generations.</p>
+        </div>
+        <div class="group bg-[#FCFDFF] border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="bg-[#0F2942]/5 p-3 rounded-2xl w-fit group-hover:bg-[#0F2942] transition-all"><i data-lucide="users" class="text-[#C5A059]"></i></div>
+          <h3 class="font-display font-bold text-[#0F2942] text-base mt-4">Controlled Batches (10-15)</h3>
+          <p class="text-slate-500 text-xs mt-2 font-light">Strict seats quota ensures no child gets overlooked or lost in a massive coaching herd.</p>
+        </div>
+        <div class="group bg-[#FCFDFF] border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="bg-[#0F2942]/5 p-3 rounded-2xl w-fit group-hover:bg-[#0F2942] transition-all"><i data-lucide="edit-3" class="text-[#C5A059]"></i></div>
+          <h3 class="font-display font-bold text-[#0F2942] text-base mt-4">Answer-Writing Skill Mastery</h3>
+          <p class="text-slate-500 text-xs mt-2 font-light">We teach exact point-wise writing, introduction setups, and highlighting of high-scoring keywords.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Teaching Methodology timeline -->
+  <section id="methodology" class="py-24 bg-slate-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">HOW WE CONSTRUCT TOPPERS</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942] tracking-tight">Anju Ma'am's Teaching Methodology</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="relative mt-20 max-w-4xl mx-auto col-span-12">
+        <div class="absolute left-6 md:left-1/2 top-4 bottom-4 w-[2px] bg-indigo-100 border-dashed border-l-2 border-[#0F2942]/20 -translate-x-1/2"></div>
+        
+        <div class="space-y-12">
+          <!-- Step 1 -->
+          <div class="flex flex-col md:flex-row items-start md:flex-row relative">
+            <div class="absolute left-6 md:left-1/2 top-1.5 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white border-4 border-slate-100 z-20 flex items-center justify-center shadow-lg -translate-x-1/2">
+              <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#0F2942] flex items-center justify-center text-[#C5A059] font-extrabold text-xs md:text-sm">01</div>
+            </div>
+            <div class="hidden md:block w-1/2"></div>
+            <div class="w-full md:w-[45%] pl-16 md:pl-0">
+              <div class="bg-white border rounded-3xl p-6 shadow-sm">
+                <span class="text-[#C5A059] text-xs font-semibold">STAGE 01</span>
+                <h3 class="font-display font-extrabold text-[#0F2942] text-base mt-2">Core Concept Learning</h3>
+                <p class="text-slate-500 text-xs mt-1">SST and History chapters broken down into narrated real stakes storytelling lines.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex flex-col md:flex-row items-start md:flex-row-reverse relative">
+            <div class="absolute left-6 md:left-1/2 top-1.5 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white border-4 border-slate-100 z-20 flex items-center justify-center shadow-lg -translate-x-1/2">
+              <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#0F2942] flex items-center justify-center text-[#C5A059] font-extrabold text-xs md:text-sm">02</div>
+            </div>
+            <div class="hidden md:block w-1/2"></div>
+            <div class="w-full md:w-[45%] pl-16 md:pl-0">
+              <div class="bg-white border rounded-3xl p-6 shadow-sm">
+                <span class="text-[#C5A059] text-xs font-semibold">STAGE 02</span>
+                <h3 class="font-display font-extrabold text-[#0F2942] text-base mt-2">Weekly Assessments</h3>
+                <p class="text-slate-500 text-xs mt-1">Cross-verifying weekly retention with comfortable, error-free feedback reports.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Board Prep Specific Highlights -->
+  <section id="board-prep" class="py-24 bg-gradient-to-br from-[#0B1D33] via-[#0F2942] to-[#081322] text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">SCORE MAXIMIZATION METHODOLOGY</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">Specialized CBSE Board Prep Programs</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="bg-[#11243B] border border-white/10 rounded-3xl p-8 shadow-2xl flex flex-col justify-between">
+          <div class="space-y-6">
+            <span class="bg-[#C5A059]/15 border border-[#C5A059]/30 text-[#C5A059] text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">Classes 8-10 SST & Hindi</span>
+            <h3 class="font-display font-extrabold text-2xl">Class 10 CBSE Social Science & Hindi Core</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">No memory cramming blocks. Geography mapping and Hindi grammar rules are locked down with clean guidelines.</p>
+          </div>
+          <button onclick="enquireSubject('Social Science - Class 10')" class="mt-8 bg-[#C5A059] text-[#0F2942] font-extrabold py-3.5 px-6 rounded-xl uppercase tracking-wider text-xs">Book Grade 10 Trial Desk</button>
+        </div>
+
+        <div class="bg-[#11243B] border border-white/10 rounded-3xl p-8 shadow-2xl flex flex-col justify-between">
+          <div class="space-y-6">
+            <span class="bg-sky-500/10 border border-sky-400/30 text-sky-450 text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">Classes 11-12 Humanities Core</span>
+            <h3 class="font-display font-extrabold text-2xl">Class 12 History, Geo & Political Science</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Formulating exact point-wise arguments for 8-mark questions. Learn keyword density triggers examiners look for.</p>
+          </div>
+          <button onclick="enquireSubject('Humanities - Class 12')" class="mt-8 bg-sky-500 hover:bg-sky-600 text-[#0F2942] font-extrabold py-3.5 px-6 rounded-xl uppercase tracking-wider text-xs">Book Grade 12 Trial Desk</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Testimonials Slider -->
+  <section id="testimonials" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">WORDS FROM FAMILIES</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942]">Parents & Toppers Reviews</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <div id="testimonial-card-container" class="bg-gradient-to-br from-[#FCFDFF] to-[#FAF8F5] border border-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[380px] sm:min-h-[300px] transition-all duration-300">
+          <div class="absolute top-0 left-0 right-0 h-[4px] bg-[#C5A059]" />
+          
+          <!-- Decorative Quote Icon background watermark -->
+          <div class="text-[#C5A059]/5 absolute -top-6 left-6 font-serif text-[10rem] leading-none select-none pointer-events-none text-left">“</div>
+          <div class="text-[#C5A059]/5 absolute -bottom-16 right-6 font-serif text-[10rem] leading-none select-none pointer-events-none text-right">”</div>
+
+          <!-- Top Row: Rating Stars & Score Badge -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-100 pb-5 w-full relative z-10">
+            <div id="testi-score-badge" class="min-h-[32px] flex items-center">
+              <div class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-100 py-1 px-3.5 rounded-full text-emerald-700 text-xs font-bold shadow-sm font-semibold">
+                <i data-lucide="award" class="w-4 h-4 text-emerald-600 animate-pulse"></i>
+                <span>98% in Social Science</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-1 text-[#C5A059]">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+          </div>
+
+          <!-- Main Quote -->
+          <div class="my-6 sm:my-8 flex-grow flex items-center justify-center relative z-10">
+            <p id="testi-feedback" class="text-slate-650 font-display font-light text-sm sm:text-base md:text-lg leading-relaxed italic max-w-2xl text-center">
+              "Anju Ma'am converted Social Science into my favorite subject! Date flowcharts are intuitive."
+            </p>
+          </div>
+
+          <!-- Bottom Row: Profile & Meta -->
+          <div class="bg-white/95 border border-slate-100/90 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 w-full relative z-10 shadow-sm">
+            <div class="flex items-center gap-3.5 text-left">
+              <div id="testi-avatar" class="w-11 h-11 rounded-full bg-[#0F2942] text-[#C5A059] flex-shrink-0 flex items-center justify-center font-bold font-display text-sm tracking-wide shadow-inner">
+                AS
+              </div>
+              <div>
+                <h4 id="testi-author" class="font-display font-bold text-[#0F2942] text-sm sm:text-base leading-snug">Aarav Sharma</h4>
+                <p id="testi-parent" class="text-slate-400 text-xs font-light">Son/Daughter of <span class="font-semibold text-slate-600">Rajesh Sharma</span></p>
+              </div>
+            </div>
+            <div>
+              <span id="testi-meta" class="bg-slate-50 text-[#0F2942] border border-slate-100/80 font-mono text-[9px] uppercase font-bold py-1.5 px-3.5 rounded-full shadow-sm">
+                Class 10 CBSE • SST
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mt-8 px-2 max-w-md mx-auto">
+          <button onclick="prevTestimonial()" class="bg-[#0F2942] hover:bg-[#163B5F] active:scale-95 text-white hover:text-[#C5A059] p-3 rounded-xl shadow-md transition-all duration-200" title="Previous Review"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+          <div class="flex items-center gap-2.5">
+            <button onclick="setTestimonialIndex(0)" class="testi-dot h-2 w-8 rounded-full bg-[#C5A059] transition-all duration-300"></button>
+            <button onclick="setTestimonialIndex(1)" class="testi-dot h-2 w-2 rounded-full bg-slate-200 transition-all duration-300"></button>
+            <button onclick="setTestimonialIndex(2)" class="testi-dot h-2 w-2 rounded-full bg-slate-200 transition-all duration-300"></button>
+            <button onclick="setTestimonialIndex(3)" class="testi-dot h-2 w-2 rounded-full bg-slate-200 transition-all duration-300"></button>
+            <button onclick="setTestimonialIndex(4)" class="testi-dot h-2 w-2 rounded-full bg-slate-200 transition-all duration-300"></button>
+            <button onclick="setTestimonialIndex(5)" class="testi-dot h-2 w-2 rounded-full bg-slate-200 transition-all duration-300"></button>
+          </div>
+          <button onclick="nextTestimonial()" class="bg-[#0F2942] hover:bg-[#163B5F] active:scale-95 text-white hover:text-[#C5A059] p-3 rounded-xl shadow-md transition-all duration-200" title="Next Review"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Accordion Callout FAQ -->
+  <section id="faq" class="py-24 bg-white relative overflow-hidden border-t">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">COMMON INQUIRIES</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942]">Frequently Asked Questions</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div id="faq-item-0" class="faq-item-container border border-[#C5A059] bg-slate-50/60 shadow-md rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(0)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-[#0F2942]">Which classes do you teach?</span>
+            <div id="faq-icon-0" class="p-1.5 rounded-full transition-transform bg-[#0F2942] text-[#C5A059] rotate-180"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-0" class="overflow-hidden transition-all duration-300 ease-in-out max-h-[500px] border-t border-slate-100">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              We support Classes 8 to 10 for SST (Social Science) and Hindi, as well as Classes 11 and 12 for Humanities/Arts tracks (History, Geography, Political Science, and related subjects).
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div id="faq-item-1" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">Are classes offline or online?</span>
+            <div id="faq-icon-1" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-1" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              All classes are strictly held offline at our safe, dedicated tuition study center at Shyam Nagar, Jaipur. Physical whiteboards and face-to-face focus are core to our curriculum.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div id="faq-item-2" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">What is the average student capacity per batch?</span>
+            <div id="faq-icon-2" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-2" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              We strictly limit our batches to 10–15 students. This ensures that Anju Ma'am can provide individualized attention, address specific learning gaps, and meticulously check every answer sheet with detailed handwritten feedback.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div id="faq-item-3" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">How is a student's progress monitored and shared?</span>
+            <div id="faq-icon-3" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-3" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              We conduct comprehensive tests every week. Evaluated copies showing structured markings and comments are shared to track weekly performance improvements.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div id="faq-item-4" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">Do you offer separate notes and revision sheets?</span>
+            <div id="faq-icon-4" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-4" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              Yes, students receive highly structured handwritten summaries, chronological timeline flowcharts for History, key definitions for Civics/Economics, and customized blank maps for physical geography practice.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div id="faq-item-5" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(5)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">How does your teaching help students score in SST and Hindi?</span>
+            <div id="faq-icon-5" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-5" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              Instead of dry memorization, we teach through active storytelling and logical timeline links. Crucially, we train students in the exact answer-presentation techniques examiners look for (point-wise structure, keyword highlighting, clean layout).
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div id="faq-item-6" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(6)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">Are bridging batches available for mid-session admissions?</span>
+            <div id="faq-icon-6" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-6" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              Yes. If a student enrolls in the middle of an academic session, we conduct short bridging classes to cover essential baseline chapters so they catch up with the active batch smoothly.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div id="faq-item-7" class="faq-item-container border border-slate-100 bg-white rounded-2xl transition-all duration-300">
+          <button onclick="toggleFaq(7)" class="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-display font-bold text-sm sm:text-base text-slate-700">Are we able to arrange a trial class?</span>
+            <div id="faq-icon-7" class="p-1.5 rounded-full transition-transform"><i data-lucide="chevron-down" class="w-4 h-4"></i></div>
+          </button>
+          <div id="faq-panel-7" class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 pointer-events-none">
+            <div class="p-5 sm:p-6 text-slate-600 text-xs sm:text-sm font-light leading-relaxed bg-white/70 rounded-b-2xl">
+              Absolutely! You can book a free demo or academic trial class by using our admission form or calling Ma'am directly at +91 98114 46304.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Location Map Hub -->
+  <section id="location" class="py-24 bg-slate-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">SAFE STUDY LOCATION</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942]">Our Location & Directions</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+          <div class="bg-white border rounded-3xl p-8 shadow-sm space-y-6 flex-grow">
+            <div class="flex items-center gap-2 font-display font-extrabold text-[#0F2942] text-lg">
+              <i data-lucide="map-pin" class="text-[#C5A059]"></i>
+              <span>Tuition Study Center Address</span>
+            </div>
+            <div class="pl-7 text-sm font-light text-slate-600 space-y-1">
+              <p class="font-semibold text-slate-800">D-102, Siddharth Path</p>
+              <p>Shyam Nagar, Jaipur</p>
+              <p>Rajasthan, India - 302019</p>
+            </div>
+            <div class="border-t pt-5 pl-7 text-xs text-slate-500 space-y-3">
+              <p><span class="font-semibold text-slate-700">Metro Proximity:</span> 5 minutes walk from Shyam Nagar Metro.</p>
+              <p><span class="font-semibold text-slate-700">Hours:</span> Mon - Sat: 3:30 PM - 8:30 PM</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="https://maps.app.goo.gl/AyA3DPig2kJFAQK86" target="_blank" class="bg-[#0F2942] text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-md">
+              <i data-lucide="navigation" class="w-4 h-4 text-[#C5A059]"></i> Get Directions
+            </a>
+            <a href="tel:+919811446304" class="bg-white text-slate-800 border py-4 rounded-xl text-xs uppercase tracking-wider text-center">Call Academy</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 h-[380px] lg:h-auto rounded-3xl overflow-hidden shadow-xl border bg-slate-300 relative">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1186719119316!2d75.7656755!3d26.904439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db43bde88eb67%3A0xe726df9f086b96e2!2sD-102%2C%20Siddharth%20Path%2C%20Shyam%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302019!5e0!3m2!1sen!2sin!4v1703624381001" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="absolute inset-0 grayscale-[10%] hover:grayscale-0 transition-all duration-300"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Interactive Lead Capture Form -->
+  <section id="contact" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+        <span class="text-[#C5A059] font-mono text-xs uppercase tracking-widest font-extrabold block">SECURE ADMISSION SPACE</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-[#0F2942] tracking-tight">Book Your Free Demo & Counsel Session</h2>
+        <div class="w-16 h-1.5 bg-[#C5A059] mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div class="space-y-6">
+            <h3 class="font-display font-extrabold text-[#0F2942] text-2xl">Direct Contact Channels</h3>
+            <p class="text-slate-500 font-light text-sm leading-relaxed">Skip the form entirely if you prefer an immediate callback. Send Anju Ma'am an official admission text on WhatsApp.</p>
+            <div class="space-y-4 border-t pt-4">
+              <div class="flex items-start gap-3"><i data-lucide="message-square" class="text-emerald-600"></i><div><h4 class="font-bold text-slate-800 text-sm">Response Time Limit</h4><p class="text-slate-500 text-xs mt-0.5">Under 2 hours typically, 7 days a week.</p></div></div>
+              <div class="flex items-start gap-3"><i data-lucide="phone" class="text-[#0F2942]"></i><div><h4 class="font-bold text-slate-800 text-sm">Best Time to Call</h4><p class="text-slate-500 text-xs mt-0.5">Mon - Sat after 3:00 PM once class commences.</p></div></div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <a href="https://wa.me/919811446304?text=Hello%20Anju%20Ma'am,%20I'm%20interested%20in%20arranging%20a%20SST%20trial%20class." target="_blank" class="bg-emerald-600 text-white font-bold text-xs uppercase py-4 rounded-xl flex items-center justify-center gap-3 shadow-md">
+              <i data-lucide="message-square" class="fill-white text-emerald-600"></i> Code Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-slate-50 border rounded-3xl p-6 sm:p-10 shadow-lg relative">
+            
+            <!-- Success Frame -->
+            <div id="form-success-box" class="hidden text-center py-12 px-4 space-y-6">
+              <div class="bg-emerald-500/15 text-emerald-600 p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div>
+              <div>
+                <h3 class="font-display font-extrabold text-[#0F2942] text-xl sm:text-2xl">Inquiry Generated Successfully!</h3>
+                <p class="text-slate-600 text-sm mt-1">Anju Ma'am's official WhatsApp drafting window has launched to finalize your parameters.</p>
+              </div>
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a id="success-wa-redirect" href="" target="_blank" class="bg-emerald-600 text-white font-bold text-xs py-4 px-8 rounded-xl flex items-center gap-2">Launch WhatsApp Chat</a>
+                <button onclick="resetAdmissionForm()" class="bg-slate-200 text-slate-800 font-bold text-xs py-4 px-8 rounded-xl">Submit Another</button>
+              </div>
+            </div>
+
+            <!-- Inquiry Form Container -->
+            <div id="form-inquiry-box" class="space-y-6">
+              <div class="border-b pb-3 flex items-center justify-between">
+                <h4 class="font-display font-medium text-slate-800 text-xs sm:text-sm">Secure Admission Portal</h4>
+                <span class="text-[10px] text-slate-400 font-mono">ALL FIELDS REQUIRED</span>
+              </div>
+
+              <form id="admission-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Student Name</label>
+                    <input type="text" id="form-student-name" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1 bg-[#fff]" placeholder="e.g. Kabir Malhotra" />
+                    <p id="err-student-name" class="form-error-label text-[10px] text-red-600 font-semibold mt-1 hidden"></p>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Parent Name</label>
+                    <input type="text" id="form-parent-name" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1 bg-[#fff]" placeholder="e.g. Sanjay Malhotra" />
+                    <p id="err-parent-name" class="form-error-label text-[10px] text-red-600 font-semibold mt-1 hidden"></p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Student Class</label>
+                    <select id="form-class" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1">
+                      <option value="Class 8 CBSE">CBSE Class 8</option>
+                      <option value="Class 9 CBSE">CBSE Class 9</option>
+                      <option value="Class 10 CBSE">CBSE Class 10 (Board)</option>
+                      <option value="Class 11 CBSE (Humanities)">CBSE Class 11 (Arts Track)</option>
+                      <option value="Class 12 CBSE (Humanities)">CBSE Class 12 (Board)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Target Subject</label>
+                    <select id="form-subject" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1">
+                      <option value="Complete Social Science (SST)">Complete Social Science (SST)</option>
+                      <option value="Hindi">Hindi Literature</option>
+                      <option value="History">Humanities: History</option>
+                      <option value="Geography">Humanities: Geography</option>
+                      <option value="Political Science">Humanities: Political Science</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Contact Mobile</label>
+                    <input type="tel" id="form-phone" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1 bg-[#fff]" placeholder="e.g. 9811446304" />
+                    <p id="err-phone" class="form-error-label text-[10px] text-red-600 font-semibold mt-1 hidden"></p>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700">Email Address (Optional)</label>
+                    <input type="text" id="form-email" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1 bg-[#fff]" placeholder="parent@example.com" />
+                    <p id="err-email" class="form-error-label text-[10px] text-red-600 font-semibold mt-1 hidden"></p>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700">Message / Requirements</label>
+                  <textarea id="form-message" rows="3" class="w-full bg-white border border-slate-200 rounded-xl py-3 px-4 text-xs sm:text-sm mt-1 resize-none" placeholder="Share child's academic struggles or past results..."></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="w-full bg-[#0F2942] text-white font-extrabold py-4 rounded-xl text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2">
+                  Enquire for Admission Now
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Footer -->
+  <footer class="bg-[#051322] border-t border-white/5 text-slate-400 font-light text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8">
+        <div class="lg:col-span-4 space-y-5">
+          <a href="#" class="inline-flex items-center gap-3">
+            <div class="bg-[#C5A059] text-[#0F2942] p-1.5 rounded-lg"><i data-lucide="award"></i></div>
+            <div>
+              <span class="block text-white font-display font-extrabold text-base leading-none">ANJU MA'AM</span>
+              <span class="block text-[#C5A059] font-mono text-[9px] tracking-widest font-bold">CBSE ACADEMY</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-xs leading-relaxed font-light">
+            Providing expert coaching for board exams across Grades 8-12. Focused on presentation precision and active map studies.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="text-white font-display font-bold text-xs uppercase tracking-wider pb-2.5 border-b border-white/5">Subjects</h3>
+          <ul class="space-y-2 text-xs">
+            <li>SST (History, Geography, Economics, Civics) - Grades 8-10</li>
+            <li>Humanities (Themes in World History, World Politics, Geography) - Grades 11-12</li>
+            <li>Hindi literature Course A & B Core classes - Grades 8-10</li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="text-white font-display font-bold text-xs uppercase tracking-wider pb-2.5 border-b border-white/5">Tuition Contacts</h3>
+          <ul class="space-y-3.5 text-xs">
+            <li class="flex items-start gap-2"><i data-lucide="map-pin" class="text-[#C5A059] w-4 h-4 mt-0.5"></i><span>D-102, Siddharth Path, Shyam Nagar, Jaipur</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="phone" class="text-[#C5A059] w-4 h-4"></i><a href="tel:+919811446304">+91 98114 46304</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/5 bg-[#030d17] py-6 text-slate-500 font-light text-[11px] sm:text-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Anju Ma'am CBSE Tuition Classes. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="https://maps.app.goo.gl/AyA3DPig2kJFAQK86" target="_blank" class="hover:text-[#C5A059]">Google Maps Location</a>
+          <span>|</span>
+          <span>Jaipur, Rajasthan, India</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
